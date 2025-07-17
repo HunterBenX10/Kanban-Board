@@ -28,4 +28,55 @@ h1 {
 .board {
   display: flex;
   justify-content: center;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.list {
+  background-color: hsl(0, 0%, 10%);
+  padding: 1rem;
+  width: 30%;
+  min-height: 400px;
+  box-shadow: 0 2px 15px 2px rgba(0, 0, 0, 0.2);
+  color: hsl(0, 0%, 90%);
+}
+
+.list h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: hsl(0, 0%, 60%);
+}
+
+.card {
+  background-color: hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 90%);
+  padding: 1rem;
+  margin-bottom: 10px;
+  cursor: grab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(158, 158, 158, 0.3);
+}
+
+.list.over {
+  background-color: hsl(0, 0%, 40%);
+}
+
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column;
+    align-items: center;
+  }
+  .list {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
